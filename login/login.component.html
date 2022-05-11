@@ -1,0 +1,26 @@
+<form  [formGroup]="formdata" >
+
+<div class="div1">
+   
+    <div class="col-md-12 form-group p_star" >
+        <input type="email" class="form-control" id="email" name="email" 
+                 placeholder="Username" formControlName="email"  >
+        <!-- <span *ngIf="form.controls.email.invalid && form.controls.email.touched">Please enter valid email.</span> -->
+    </div><br><br>
+    <div class="col-md-12 form-group p_star" >
+        <input type="password" class="form-control" id="password" name="password"
+         placeholder="Password" formControlName="password">
+        <!-- <span *ngIf="form.controls.password.invalid && form.controls.password.touched">Please enter valid password.</span> -->
+
+    </div><br><br>
+    <div class="col-md-12 form-group">
+       
+        <button type="submit"  class="btn btn-primary me-2" [disabled]="!formdata.valid" (click)="submitdata(formdata.value)">
+            log in 
+        </button><br>
+        <a class="lost_pass" href="#" style="color:black;">forget password?</a>
+    </div>
+</div>
+</form>
+
+

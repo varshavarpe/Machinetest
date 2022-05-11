@@ -1,0 +1,51 @@
+<form  [formGroup]="formdata1">
+
+    <div class="div2">
+       
+        <div class="col-md-12 form-group p_star" >
+            <input type="text" class="form-control" id="fname" name="fname" 
+                     placeholder="First Name" formControlName="fname"  >
+            <!-- <span *ngIf="form.controls.email.invalid && form.controls.email.touched">Please enter valid email.</span> -->
+        </div><br><br>
+        <div class="col-md-12 form-group p_star" >
+            <input type="text" class="form-control" id="lname" name="lname"
+             placeholder="Last Name" formControlName="lname">
+            <!-- <span *ngIf="form.controls.password.invalid && form.controls.password.touched">Please enter valid password.</span> -->
+    
+        </div><br><br>
+        <div class="col-md-12 form-group p_star" >
+            <input type="email" class="form-control" id="password" name="email1"
+             placeholder="Email" formControlName="email1">
+            <!-- <span *ngIf="form.controls.password.invalid && form.controls.password.touched">Please enter valid password.</span> -->
+    
+        </div><br><br>
+        <div class="col-md-12 form-group p_star" >
+            <input type="password" class="form-control" id="password" name="password1"
+             placeholder="Password" formControlName="password1">
+            <!-- <span *ngIf="form.controls.password.invalid && form.controls.password.touched">Please enter valid password.</span> -->
+    
+        </div><br><br>
+        <div class="col-md-12 form-group p_star" >
+            <input type="password" class="form-control" id="password" name="cpassword"
+             placeholder="Confirm Password" formControlName="cpassword">
+            <!-- <span *ngIf="form.controls.password.invalid && form.controls.password.touched">Please enter valid password.</span> -->
+    
+        </div><br><br>
+        <div class="col-md-12 form-group p_star" >
+            <input type="number" class="form-control" id="password" name="mobileno"
+             placeholder="Mobile No" formControlName="mobileno">
+            <!-- <span *ngIf="form.controls.password.invalid && form.controls.password.touched">Please enter valid password.</span> -->
+    
+        </div><br><br>
+        <div class="col-md-12 form-group">
+           
+            <button type="submit"  class="btn btn-primary me-2" [disabled]="!formdata1.valid" (click)="submit(formdata1.value)" >
+               Save
+            </button>
+            <button  class="btn btn-danger" (click)="logout()">LogOut</button>
+           
+        </div>
+    </div>
+    </form>
+    
+    
